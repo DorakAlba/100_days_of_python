@@ -1,0 +1,43 @@
+import random
+
+
+
+print ("""
+        ________           _____    _________ _________                                           
+\_____  \  __ __  /  _  \  /   _____//   _____/   _____ ___.__.             _____   ____  
+ /  / \  \|  |  \/  /_\  \ \_____  \ \_____  \   /     <   |  |   ______   /     \_/ __ \ 
+/   \_/.  \  |  /    |    \/        \/        \ |  Y Y  \___  |  /_____/  |  Y Y  \  ___/ 
+\_____\ \_/____/\____|__  /_______  /_______  / |__|_|  / ____|           |__|_|  /\___  >
+       \__>             \/        \/        \/        \/\/                      \/     \/ 
+
+""")
+print ("Hello and Enjoy the game for 100 days of python \n")
+want_to_play = True
+while want_to_play:
+  number = random.randint(1, 100)
+  difficulty = None
+  while difficulty != "easy" and difficulty != "hard":
+    difficulty = input ("select your difficulty: easy or hard \n ").lower()
+  won = False
+  if difficulty == "easy":
+    life = 10
+  else:
+    life = 5
+  while life > 0 and won == False:
+    print (f"you has {life} lifes left" )
+    quess = int(input("quess you number! "))
+    if quess > number:
+      print ("too high")
+    elif quess < number:
+      print ("too low")
+    else:
+      print("you right")
+      won = True
+    life -=1
+  if won == True:
+    print(f"your won, {number} was hidden")
+  else:
+    print(f"your lost, {number} was hidden")
+  to_play = input("want to play more? Yes/No ").lower()
+  if to_play != "yes":
+    want_to_play = False
