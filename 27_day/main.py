@@ -1,0 +1,26 @@
+import tkinter
+
+def calculate():
+    value = int(enter.get())
+    value_km = int(value* 1.6)
+    km_value.config(text=value_km)
+window = tkinter.Tk()
+window.title('Mile to Km Converter')
+window.minsize(width= 300, height=200)
+
+button = tkinter.Button(text='Calculate')
+button.grid(row=2,column=1)
+enter = tkinter.Entry()
+enter.grid(row=0, column=1)
+enter.insert(0,string = 0)
+enter.focus()
+label_mile= tkinter.Label(text='Miles',font=('Arial',12,'bold'))
+label_mile.grid(row=0,column=2)
+label_km= tkinter.Label(text='Km')
+label_km.grid(row=1,column=2)
+eq= tkinter.Label(text='is equal to')
+eq.grid(row=1,column=0)
+km_value = tkinter.Label(text=0)
+km_value.grid(row= 1,column=1)
+button.config(command=calculate)
+window.mainloop()
