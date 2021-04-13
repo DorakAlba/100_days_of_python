@@ -6,7 +6,7 @@ my_mail = ''
 my_pass = ''
 MY_LAT = 55.749931 # Your latitude
 MY_LONG = 48.742371 # Your longitude
-
+print('hah')
 response = requests.get(url="http://api.open-notify.org/iss-now.json")
 response.raise_for_status()
 data = response.json()
