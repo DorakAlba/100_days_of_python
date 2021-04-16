@@ -1,8 +1,8 @@
 import requests
 import os
 from twilio.rest import Client
-account_sid = s.environ.get('ACCOUD_SSID')
-auth_token = s.environ.get('AUTH_KEY')
+account_sid = os.environ.get('ACCOUD_SSID')
+auth_token = os.environ.get('AUTH_KEY')
 API_KEY = os.environ.get('WEATHER_API')
 latitude = 4.4
 longitude = 68.342371
