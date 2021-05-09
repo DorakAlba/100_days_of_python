@@ -16,5 +16,7 @@ sp = spotipy.Spotify(auth_manager=SpotifyOAuth(scope='playlist-modify-private',
 # user_id = sp.current_user()["id"]
 # name = sp.current_user()['display_name']
 # print(name)
-a = sp.search(q='song:Miss You Much', type = 'track')
-pprint(a)
+def find_song(song, year):
+    a = sp.search(q=f'track:{song} year:{year}', type = 'track')
+    # pprint(a)
+    return a
